@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './components/category/category.component';
 import { CardComponent } from './components/card/card.component';
+import { HomeComponent } from './home/home.component';
+import { PagecardsComponent } from './pagecards/pagecards.component';
 
 @NgModule({
-  declarations: [AppComponent, CategoryComponent, CardComponent],
+  declarations: [AppComponent, CategoryComponent, CardComponent, HomeComponent, PagecardsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
