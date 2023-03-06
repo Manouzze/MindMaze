@@ -1,0 +1,18 @@
+<div class="container-card">
+  <div class="create-new-card"></div>
+  <div
+    class="card"
+    (click)="returnCard()"
+    [class.flipped]="isFlipped"
+    *ngFor="let item of cards"
+  >
+    <div class="card-recto">
+      <p class="phrase">{{ item.recto }}</p>
+      <!-- {{ item.recto }} -->
+    </div>
+    <div class="card-verso hide">
+      <p class="phrase">{{ item.verso }}</p>
+      <!-- {{ item.verso }} -->
+    </div>
+  </div>
+</div>
