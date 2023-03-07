@@ -6,12 +6,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryComponent } from './components/category/category.component';
 import { CardComponent } from './components/card/card.component';
-import { HomeComponent } from './home/home.component';
-import { PagecardsComponent } from './pagecards/pagecards.component';
+import { HomeComponent } from './components/homepage/home.component';
+import { PagecardsComponent } from './components/pagecards/pagecards.component';
+import { CreatecardComponent } from './components/create-card/create-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, CategoryComponent, CardComponent, HomeComponent, PagecardsComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    CategoryComponent,
+    CardComponent,
+    HomeComponent,
+    PagecardsComponent,
+    CreatecardComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

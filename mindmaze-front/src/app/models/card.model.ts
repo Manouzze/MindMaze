@@ -1,6 +1,10 @@
 export interface Card {
-  id: number;
   recto: string;
   verso: string;
-  category_id: number;
+  // category: string;
 }
+
+// interface Typologie {
+//   libelle: string;
+//   id: number;
+// }

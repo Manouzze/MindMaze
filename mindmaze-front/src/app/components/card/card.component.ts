@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { Card } from 'src/app/models/card.model';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -18,9 +19,8 @@ export class CardComponent implements OnInit {
   }
 
   isFlipped = false;
-
-  returnCard() {
+  returnCard(event: any) {
+    console.log(event.target.innerText);
     this.isFlipped = !this.isFlipped;
-    // console.log('Hello returnCard()');
   }
 }

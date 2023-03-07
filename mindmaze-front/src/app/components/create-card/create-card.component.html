@@ -1,0 +1,17 @@
+<p>createcard works!</p>
+
+<form *ngIf="createCardForm" [formGroup]="createCardForm">
+  <!-- RECTO -->
+  <label for="recto"> Recto</label>
+  <input formControlName="recto" type="text" id="recto" />
+  <!-- VERSO -->
+  <label for="verso"> Verso</label>
+  <input formControlName="verso" type="text" id="verso" />
+  <!-- CATEGORY -->
+  <!-- <label for="category"> Categorie</label>
+  <select formControlName="category" type="select" id="category">
+    <option value="science">Science</option>
+    <option value="geo">Géographie</option>
+  </select> -->
+  <button (click)="submit()">Créer la carte</button>
+</form>

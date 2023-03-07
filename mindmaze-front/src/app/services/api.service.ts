@@ -35,6 +35,10 @@ export class ApiService {
     return this.http.post<Category>(`${this.baseUrl}`, category);
   }
   createCard(card: Card): Observable<Card> {
-    return this.http.post<Card>(`${this.baseUrl}/cards`, this.httpOptions);
+    return this.http.post<Card>(
+      `${this.baseUrl}/cards`,
+      card,
+      this.httpOptions
+    );
   }
 }
