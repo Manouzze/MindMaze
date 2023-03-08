@@ -10,6 +10,7 @@ import { HomeComponent } from './components/homepage/home.component';
 import { PagecardsComponent } from './components/pagecards/pagecards.component';
 import { CreatecardComponent } from './components/create-card/create-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     PagecardsComponent,
     CreatecardComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

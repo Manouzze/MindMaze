@@ -1,9 +1,21 @@
-<div>
+<div class="container-page-cards">
   <a routerLink="/home">Home</a>
   <div class="title">
     <h1>{{ title }}</h1>
   </div>
+  <div class="menu">
+    <h2>CARTES</h2>
+    <div class="search-cards">
+      <p>Rechercher une carte</p>
+      <img src="../../../assets/static/icons/search.png" alt="search" />
+    </div>
+    <p>Toutes les catégories</p>
+    <div class="list-categories">
+      <app-category></app-category>
+    </div>
+    <app-modal></app-modal>
+  </div>
+  <app-create-card></app-create-card>
+
+  <app-card></app-card>
 </div>
-<app-create-card></app-create-card>
-<app-category></app-category>
-<app-card></app-card>
