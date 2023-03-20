@@ -11,6 +11,7 @@ import { PagecardsComponent } from './components/pagecards/pagecards.component';
 import { CreatecardComponent } from './components/create-card/create-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from './components/modal/modal.component';
+import { CreateCategoryComponent } from './components/create-category/create-category.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ModalComponent } from './components/modal/modal.component';
     PagecardsComponent,
     CreatecardComponent,
     ModalComponent,
+    CreateCategoryComponent,
   ],
   imports: [
     BrowserModule,

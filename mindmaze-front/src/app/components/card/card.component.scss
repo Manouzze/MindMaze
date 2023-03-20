@@ -1,42 +1,49 @@
-.card {
-  position: relative;
-  background-color: #1e1e1e;
-  max-width: 150px;
-  min-height: 130px;
-  perspective: 1000px;
-  border-radius: 5px;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  border: solid 4px #2a9d8f;
-  cursor: pointer;
+.container-card {
+  margin-top: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  .card {
+    position: relative;
+    background-color: white;
+    min-width: 180px;
+    min-height: 130px;
+    perspective: 1000px;
+    border-radius: 2px;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 1s;
 
-  .card-recto,
-  .card-verso {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.5s;
-    color: white;
-  }
+    cursor: pointer;
 
-  .card-recto {
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
+    .card-recto,
+    .card-verso {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: transform 0.5s;
+      color: #1e1e1e;
+    }
 
-  .card-verso {
-    z-index: 1;
-    transform: rotateY(180deg);
-  }
+    .card-recto {
+      z-index: 2;
+      transform: rotateY(0deg);
+    }
 
-  &.flipped {
-    transform: rotateY(180deg);
+    .card-verso {
+      z-index: 1;
+      transform: rotateY(180deg);
+    }
+
+    &.flipped {
+      transform: rotateY(180deg);
+    }
   }
 }

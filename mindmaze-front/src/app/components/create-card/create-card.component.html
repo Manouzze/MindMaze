@@ -6,10 +6,18 @@
   <label for="verso"> Verso</label>
   <input formControlName="verso" type="text" id="verso" />
   <!-- CATEGORY -->
-  <!-- <label for="category"> Categorie</label>
-  <select formControlName="category" type="select" id="category">
-    <option value="science">Science</option>
-    <option value="geo">Géographie</option>
-  </select> -->
-  <button (click)="submit()">Créer la carte</button>
+  <label for="category">Category:</label>
+  <select
+    id="category"
+    name="category"
+    type="select"
+    formControlName="category"
+  >
+    <option value="">-- Select a category --</option>
+    <option *ngFor="let category of category" [value]="category.name">
+      {{ category.name }}
+    </option>
+  </select>
+
+  <button (click)="submit()">Ajouter</button>
 </form>

@@ -12,8 +12,7 @@ public class Card {
     private String recto;
     @Column(name = "verso")
     private String verso;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", referencedColumnName = "category_id")
+    @ManyToOne(fetch = FetchType.EAGER)
     private Category category;
 
     public Long getCard_id() {

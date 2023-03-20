@@ -1,7 +1,9 @@
 export interface Card {
   recto: string;
   verso: string;
-  // category: string;
+  category: {
+    name: string;
+  };
 }
 
 // interface Typologie {

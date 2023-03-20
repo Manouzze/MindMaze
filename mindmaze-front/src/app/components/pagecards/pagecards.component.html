@@ -3,19 +3,64 @@
   <div class="title">
     <h1>{{ title }}</h1>
   </div>
+
   <div class="menu">
     <h2>CARTES</h2>
     <div class="search-cards">
       <p>Rechercher une carte</p>
       <img src="../../../assets/static/icons/search.png" alt="search" />
     </div>
-    <p>Toutes les catégories</p>
+
     <div class="list-categories">
+      <p>Toutes les catégories</p>
       <app-category></app-category>
     </div>
-    <app-modal></app-modal>
+
+    <!-- CONTAINER CREATE -->
+    <div class="container-general-create">
+      <!-- CREATE CARD -->
+      <!-- BUTTON CREATE CARD -->
+      <div class="container-button-create">
+        <div class="buttonShowmodal">
+          <img src="../../../assets/static/icons/plus.png" alt="plus" />
+          <p (click)="modalCreateCard.show()">Ajouter une carte</p>
+        </div>
+        <!-- MODAL CREATE CARD -->
+        <dialog #modalCreateCard>
+          <img
+            (click)="modalCreateCard.close()"
+            src="./../../../assets/static/icons/close.png"
+          />
+          <div class="container-modal">
+            <p>Créer une carte</p>
+            <app-create-card></app-create-card>
+          </div>
+          <!-- <app-modal></app-modal> -->
+        </dialog>
+      </div>
+
+      <!-- CREATE CATEGORY -->
+      <!-- BUTTON CREATE CATEGORY -->
+      <div class="container-button-create">
+        <div class="buttonShowmodal">
+          <img src="../../../assets/static/icons/plus.png" alt="plus" />
+          <p (click)="modalCreateCategory.show()">Ajouter une catégorie</p>
+        </div>
+        <!-- MODAL CREATE CARD -->
+        <dialog #modalCreateCategory>
+          <img
+            (click)="modalCreateCategory.close()"
+            src="./../../../assets/static/icons/close.png"
+          />
+          <div class="container-modal">
+            <p>Créer une catégorie</p>
+            <app-create-category></app-create-category>
+          </div>
+          <!-- <app-modal></app-modal> -->
+        </dialog>
+      </div>
+    </div>
   </div>
-  <app-create-card></app-create-card>
 
   <app-card></app-card>
 </div>
