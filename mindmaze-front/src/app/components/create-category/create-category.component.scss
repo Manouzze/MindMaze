@@ -4,7 +4,6 @@ form {
   gap: 5px;
 
   input,
-  select,
   button {
     border: none;
     border-radius: 5px;
@@ -18,7 +17,6 @@ form {
     font-family: "Bebas Neue", cursive;
     font-size: 20px;
     letter-spacing: 0.04em;
-
     min-height: 50px;
     cursor: pointer;
   }

@@ -13,13 +13,6 @@ public class Category {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "category")
-    private List<Card> card;
-
-
-    public Category() {
-    }
-
     public Long getCategory_id() {
         return category_id;
     }
@@ -36,11 +29,5 @@ public class Category {
         this.name = name;
     }
 
-    public List<Card> getCard() {
-        return card;
-    }
 
-    public void setCard(List<Card> card) {
-        this.card = card;
-    }
 }

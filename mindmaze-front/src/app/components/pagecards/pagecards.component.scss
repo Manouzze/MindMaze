@@ -1,7 +1,7 @@
 .container-page-cards {
   margin: 0px;
   padding: 0px;
-  background: linear-gradient(#0c0325, #130843);
+  background: #1e1e1e;
   color: white;
   min-height: 100vh;
   .title,
@@ -10,6 +10,7 @@
     font-weight: 400;
   }
   .menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,8 +30,61 @@
         color: rgba(12, 3, 37, 0.2);
       }
     }
-    p {
-      font-weight: 600;
+    .list-categories {
+      margin: 20px;
+      p {
+        font-weight: 600;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+.container-general-create {
+  display: flex;
+  gap: 15px;
+  .container-button-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .buttonShowmodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #2a9d8f;
+    min-width: 269px;
+    min-height: 42px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  dialog {
+    background-color: #264653;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    border: none;
+    border-radius: 10px;
+
+    .container-modal {
+      color: white;
+      padding: 50px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-family: "Bebas Neue", cursive;
+        letter-spacing: 0.07em;
+        font-size: 40px;
+      }
+    }
+    img {
+      cursor: pointer;
+      width: 25px;
     }
   }
 }

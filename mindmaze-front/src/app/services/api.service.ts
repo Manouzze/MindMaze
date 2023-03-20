@@ -27,12 +27,13 @@ export class ApiService {
   getCardList(): Observable<Card[]> {
     return this.http.get<Card[]>(`${this.baseUrl}/cards`, this.httpOptions);
   }
-  // getCategoryById(id: number): Observable<Category> {
-  //   return this.http.get<Category>(`${this.baseUrl}/${id}`);
-  // }
 
   createCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(`${this.baseUrl}`, category);
+    return this.http.post<Category>(
+      `${this.baseUrl}/categories`,
+      category,
+      this.httpOptions
+    );
   }
   createCard(card: Card): Observable<Card> {
     return this.http.post<Card>(

@@ -13,9 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cards")
 public class CardController {
+    public class ResourceNotFoundException extends RuntimeException {
+        public ResourceNotFoundException(String message) {
+            super(message);
+        }
+    }
     @Autowired
     private CardRepository cardRepository;
-
+    @Autowired
+    private CategoryRepository categoryRepository;
     @GetMapping
     public List<Card> list(){
         return cardRepository.findAll();
@@ -27,8 +33,11 @@ public class CardController {
     }
     @PostMapping
     public Card create(@RequestBody final Card card) {
-        Category category = CategoryRepository.getOne(card.getCategory().getCategory_id()); // récupération de la Category depuis la base de données
-        card.setCategory(category); // association de la Category à la Card
+
+        Category category = categoryRepository.findByName(card.getCategory().getName())
+                .orElseThrow(() -> new ResourceNotFoundException("Category not found"));
+        card.setCategory(category);
+
         return cardRepository.saveAndFlush(card);
     }
 
@@ -38,3 +47,4 @@ public class CardController {
     }
 
 }
+

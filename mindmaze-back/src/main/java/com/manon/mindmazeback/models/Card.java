@@ -12,7 +12,9 @@ public class Card {
     private String recto;
     @Column(name = "verso")
     private String verso;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.EAGER)
+
     private Category category;
 
     public Long getCard_id() {

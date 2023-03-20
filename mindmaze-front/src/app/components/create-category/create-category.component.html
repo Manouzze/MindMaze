@@ -1,0 +1,7 @@
+<form *ngIf="createCategoryForm" [formGroup]="createCategoryForm">
+  <!-- NAME -->
+  <label for="name">Name</label>
+  <input formControlName="name" type="text" id="name" />
+
+  <button (click)="submit()">Ajouter</button>
+</form>
