@@ -17,11 +17,13 @@ export class CreateCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.createCategoryForm = new FormGroup({
       name: new FormControl(),
+      // image: new FormControl(),
     });
   }
   public submit(): void {
     this.createCategoryRequest = {
       name: this.createCategoryForm.get('name')?.value,
+      // image: this.createCategoryForm.get('image')?.value,
     };
     console.log(this.createCategoryForm, 'uuuuu');
     if (this.createCategoryRequest) {

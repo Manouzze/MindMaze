@@ -13,6 +13,17 @@ public class Category {
     @Column(name = "name")
     private String name;
 
+    @Lob
+    private byte[] image;
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
     public Long getCategory_id() {
         return category_id;
     }

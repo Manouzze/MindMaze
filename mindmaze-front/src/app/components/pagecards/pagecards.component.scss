@@ -1,11 +1,15 @@
 .container-page-cards {
   margin: 0px;
   padding: 0px;
-  background: #1e1e1e;
+  background: #282a36;
   color: white;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
   .title,
   h2 {
+    text-align: center;
     font-family: "Bebas Neue", cursive;
     font-weight: 400;
   }
@@ -52,18 +56,15 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-color: #2a9d8f;
+    background-color: #be93fb;
     min-width: 269px;
     min-height: 42px;
     border-radius: 5px;
     cursor: pointer;
   }
   dialog {
-    background-color: #264653;
+    background-color: #282a36;
     position: absolute;
-    top: 30px;
-    bottom: 30px;
-    border: none;
     border-radius: 10px;
 
     .container-modal {
@@ -75,6 +76,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      border: solid 0.5px #282a36;
 
       p {
         font-family: "Bebas Neue", cursive;

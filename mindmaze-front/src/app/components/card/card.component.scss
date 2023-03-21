@@ -1,12 +1,14 @@
-.container-card {
+.title-all-cards {
   margin-top: 80px;
+}
+.container-card {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 15px;
   .card {
     position: relative;
-    background-color: white;
+    background-color: #87e3f8;
     min-width: 180px;
     min-height: 130px;
     perspective: 1000px;
