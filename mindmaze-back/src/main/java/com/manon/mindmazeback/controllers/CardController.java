@@ -33,9 +33,11 @@ public class CardController {
     }
     @PostMapping
     public Card create(@RequestBody final Card card) {
+
         Category category = categoryRepository.findByName(card.getCategory().getName())
                 .orElseThrow(() -> new ResourceNotFoundException("Category not found"));
         card.setCategory(category);
+
         return cardRepository.saveAndFlush(card);
     }
 
